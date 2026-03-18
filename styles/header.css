@@ -1,0 +1,43 @@
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+#spinning-logo {
+  transition: transform 0.5s ease;
+}
+
+#spinning-logo:hover {
+  transform: rotate(90deg);
+}
+
+#spinning-bag{
+    transition: transform 0.5s ease;
+}
+
+#spinning-bag:hover {
+    transform: rotate(-30deg);
+}
+
+a{
+    position: relative;
+
+    & span {
+        position: absolute;
+        top: -0.6rem;
+        right: -0.6rem;
+        background-color: var(--snitap-sun);
+        width: 1.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+    }
+}

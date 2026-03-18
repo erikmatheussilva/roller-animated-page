@@ -1,0 +1,74 @@
+@import url(global.css);
+
+.container {
+  --max-width: 393px;
+  width: min(var(--max-width), 100% - var(--padding-x-lg) * 2);
+  margin: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.items-center {
+  align-items: center;
+}
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.padding-y {
+  padding-block: var(--padding-y);
+}
+
+.padding-y-lg {
+  padding-block: var(--padding-y-lg);
+}
+
+.padding-x {
+  padding-inline: var(--padding-x);
+}
+
+.padding-x-lg {
+  padding-inline: var(--padding-x-lg);
+}
+
+.gap-sm {
+  gap: var(--gap-sm);
+}
+
+.gap-md {
+  gap: var(--gap-md);
+}
+
+.gap-lg {
+  gap: var(--gap-lg);
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}

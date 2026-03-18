@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile */
+:root {
+  /* ================= COLORS ================= */
+
+  /* Brand */
+  --snitap-sun: #ffcd1e;
+  --snitap-sky-mid: #06b6d4;
+  --snitap-sky-light: #67e8f9;
+  --snitap-joy-mid: #db2777;
+  --snitap-joy-light: #f472b6;
+  --snitap-leaf-mid: #16a34a;
+
+  /* Base */
+  --text-color: #000000;
+  --highlight-color: #000000;
+  --background-color: #fafafa;
+
+  /* ================= SPACING ================= */
+
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-7: 2rem; /* 32px */
+  --space-8: 2.5rem; /* 40px */
+
+  --padding-y: var(--space-4);
+  --padding-y-lg: var(--space-6);
+
+  --padding-x: var(--space-4);
+  --padding-x-lg: var(--space-6);
+
+  --gap-sm: var(--space-2);
+  --gap-md: var(--space-4);
+  --gap-lg: var(--space-6);
+
+  /* ================= TYPOGRAPHY ================= */
+
+  /* Font families */
+  --syne: "Syne", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+
+  /* headings */
+  --heading-1: 700 2rem/125% var(--syne); /* 32px */
+  --heading-2: 700 1.5rem/120% var(--syne); /* 24px */
+
+  /* UI text */
+  --button-label: 500 0.875rem/150% var(--montserrat); /* 14px */
+  --span: 500 0.75rem/150% var(--montserrat); /* 12px */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  border: 1px solid red;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+header {
+  border: 1px solid blue;
+}
+
+main {
+  border: 1px solid green;
+}
+
+h1 {
+  font: var(--heading-1);
+}
+
+h2 {
+  font: var(--heading-2);
+}
+
+span {
+  font: var(--span);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+/* Desktop */
+@media (width >= 80em) {
+  :root {
+    /* ================= SPACING ================= */
+
+    --padding-y: var(--space-6);
+    --padding-y-lg: var(--space-8);
+
+    --padding-x: var(--space-6);
+    --padding-x-lg: var(--space-7);
+
+    --gap-md: var(--space-6);
+    --gap-lg: var(--space-7);
+
+    /* ================= TYPOGRAPHY ================= */
+
+    --heading-1: 700 4rem/125% var(--syne); /* 64px → 4rem */
+    --heading-2: 700 2.5rem/120% var(--syne); /* 40px → 2.5rem */
+
+    /* UI Text (Montserrat) */
+    --button-label: 500 1rem/150% var(--montserrat); /* 16px → 1rem */
+    --span: 500 0.875rem/150% var(--montserrat); /* 14px → 0.875rem */
+  }
+}
