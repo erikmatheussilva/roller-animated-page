@@ -2,7 +2,7 @@
 
 .container {
   --max-width: 393px;
-  width: min(var(--max-width), 100% - var(--padding-x-lg) * 2);
+  width: min(var(--max-width), 100% - var(--padding-x) * 2);
   margin: auto;
 }
 

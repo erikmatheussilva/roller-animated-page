@@ -1,21 +1,22 @@
 #hero {
-  max-width: 80rem;
+  max-width: 393px;
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 1rem;
   margin-inline: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
   gap: var(--space-8);
 
   & h1 {
-    max-width: 40rem;
+    max-width: 350px;
   }
 
   & h1 div {
     display: inline-block;
     overflow: hidden;
-    height: 5rem;
+    height: 2.5rem;
     width: min-content;
     vertical-align: bottom;
     span {
@@ -39,14 +40,14 @@
   & .hero-buttons {
     margin-top: var(--space-8);
     display: flex;
-    gap: var(--space-6);
+    flex-direction: column;
+    gap: var(--space-8);
 
     a#buyNow {
-      margin-right: 7.5rem;
       display: flex;
       align-items: center;
-      gap: var(--space-3);
-      padding: var(--space-6) var(--space-8);
+      gap: var(--space-8);
+      padding: var(--space-5) var(--space-8);
       background-color: var(--snitap-sun);
       font: var(--button-label);
       border-radius: 9999px;
@@ -59,9 +60,10 @@
     }
 
     a#preview {
-      display: flex;
-      align-items: center;
+      margin-left: 5rem;
+      order: -1;
       font: var(--button-label);
+      padding: var(--space-5) var(--space-8);
       transition: 0.7s ease;
       text-transform: uppercase;
       position: relative;
@@ -71,8 +73,9 @@
 
       & span {
         position: absolute;
-        right: 9rem;
         display: flex;
+        left: -5rem;
+        bottom: 4rem;
         justify-content: center;
         padding: var(--space-6) var(--space-8);
         background-color: var(--background-color);
@@ -234,5 +237,143 @@
 
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@media (width >= 80em) {
+  #hero {
+    max-width: 80rem;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    gap: var(--space-8);
+
+    & h1 {
+      max-width: 40rem;
+    }
+
+    & h1 div {
+      display: inline-block;
+      overflow: hidden;
+      height: 5rem;
+      width: min-content;
+      vertical-align: bottom;
+      span {
+        display: block;
+        font: var(--heading-1);
+        animation: rollUp 8s ease-in-out infinite;
+      }
+    }
+    & h1 span:nth-child(1) {
+      color: var(--snitap-sky-mid);
+    }
+    & h1 span:nth-child(2) {
+      color: var(--snitap-joy-mid);
+    }
+    & h1 span:nth-child(3) {
+      color: var(--snitap-leaf-mid);
+    }
+    & h1 span:nth-child(4) {
+      color: var(--snitap-sky-mid);
+    }
+    & .hero-buttons {
+      margin-top: var(--space-8);
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-6);
+
+      a#buyNow {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-6) var(--space-8);
+        background-color: var(--snitap-sun);
+        font: var(--button-label);
+        border-radius: 9999px;
+        transition: 0.7s ease;
+        text-transform: uppercase;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      a#preview {
+        display: flex;
+        align-items: center;
+        order: initial;
+        font: var(--button-label);
+        padding: var(--space-5) var(--space-4);
+        transition: 0.7s ease;
+        text-transform: uppercase;
+        position: relative;
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        & span {
+          position: absolute;
+          right: 8rem;
+          display: flex;
+          justify-content: center;
+          padding: var(--space-6) var(--space-8);
+          background-color: var(--background-color);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    & .hero-image {
+      display: block;
+      width: 100%;
+      max-width: 30.5rem;
+      height: 30.5rem;
+
+      & .content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      & img {
+        position: absolute;
+        width: 100%;
+      }
+
+      & img[src*="ellipse"] {
+        width: 94%;
+        top: 3%;
+        left: 3%;
+        animation: slide-in-right 2.5s 50ms ease forwards;
+      }
+
+      & img[src*="stars-1"] {
+        max-width: 5.5rem;
+        top: 30%;
+        z-index: 0;
+        opacity: 0;
+        animation:
+          slide-in-right 2s 400ms ease both,
+          appear 100ms 400ms both;
+      }
+
+      & img[src*="stars-2"] {
+        max-width: 3.5rem;
+        bottom: 35%;
+        right: -1%;
+        opacity: 0;
+        animation:
+          slide-in-right 2.2s 400ms ease both,
+          appear 100ms 400ms both;
+      }
+
+      & img[src*="patins"] {
+        z-index: 1;
+        animation: slide-in-right 2.5s ease forwards;
+      }
+    }
   }
 }
