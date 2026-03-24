@@ -105,7 +105,7 @@ Adapting layout, spacing, and animation behavior.
 
 ## How to View
 
-[text](https://erikmatheussilva.github.io/roller-animated-page/)
+[Link do projeto](https://erikmatheussilva.github.io/roller-animated-page/)
 ---
 
 ## Learning Outcomes
